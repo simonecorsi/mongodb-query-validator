@@ -15,12 +15,13 @@
     "prepare": "node prepare.js || echo 'Skipping prepare'"
   },
   "keywords": [
-    "markdown",
-    "generator",
-    "declarative",
-    "javascript",
+    "mongodb",
+    "mongo",
+    "query",
+    "validator",
     "typescript",
-    "programmatic",
+    "javascript",
+    "nodejs",
     "md",
     "js",
     "esnext",
