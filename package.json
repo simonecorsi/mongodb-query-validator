@@ -1,6 +1,6 @@
 {
   "name": "mongodb-query-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "✅ Validate your MongoDB queries operators before executing them",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
