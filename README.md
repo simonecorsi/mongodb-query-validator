@@ -1,13 +1,13 @@
 # TODO
 
-- [ ] Remove {{ PROJECT_NAME }} and {{ PROJECT_URL }}
+- [ ] Remove mongodb-query-validator and https://github.com/simonecorsi/mongodb-query-validator
 - [ ] Add `npm_token` secret to github to allow action to publish
 
-# {{ PROJECT_NAME }}
+# mongodb-query-validator
 
 <!-- PROJECT SHIELDS -->
 
-<!-- ![tests](https://github.com/simonecorsi/{{ PROJECT_NAME }}/workflows/test/badge.svg) -->
+<!-- ![tests](https://github.com/simonecorsi/mongodb-query-validator/workflows/test/badge.svg) -->
 
 <!-- toc -->
 
@@ -31,9 +31,9 @@ This packages helps in retrieving all the starred repositories for a given githu
 ## Installation
 
 ```sh
-npm i --save {{ PROJECT_NAME }}
+npm i --save mongodb-query-validator
 # OR
-yarn add {{ PROJECT_NAME }}
+yarn add mongodb-query-validator
 ```
 
 <!-- USAGE EXAMPLES -->

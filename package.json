@@ -1,11 +1,11 @@
 {
-  "name": "{{ PROJECT_NAME }}",
+  "name": "mongodb-query-validator",
   "version": "1.0.0-0",
   "description": "desc",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
   "repository": {
-    "url": "{{ PROJECT_URL }}"
+    "url": "https://github.com/simonecorsi/mongodb-query-validator"
   },
   "publishConfig": {
     "access": "public",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "tap --ts",
+    "test": "tap",
     "coverage": "tap --coverage-report=html",
     "prepare": "node prepare.js || echo 'Skipping prepare'"
   },
@@ -61,7 +61,7 @@
     "markdown-toc": "^1.2.0",
     "nyc": "^15.1.0",
     "prettier": "^3.2.5",
-    "tap": "^18.7.0",
+    "tap": "^18.7.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }

@@ -1,5 +1,5 @@
-branches: 50
-functions: 95
-lines: 95
-statements: 95
-ts: true
+# vim: set filetype=yaml :
+files:
+  - test/**/*.test.ts
+test-env:
+  - NODE_ENV=test
