@@ -4,9 +4,6 @@
   "description": "desc",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
-  "repository": {
-    "url": "https://github.com/simonecorsi/mongodb-query-validator"
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
