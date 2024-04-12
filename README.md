@@ -1,8 +1,3 @@
-# TODO
-
-- [ ] Remove mongodb-query-validator and https://github.com/simonecorsi/mongodb-query-validator
-- [ ] Add `npm_token` secret to github to allow action to publish
-
 # mongodb-query-validator
 
 <!-- PROJECT SHIELDS -->
@@ -11,7 +6,7 @@
 
 <!-- toc -->
 
-- [About The Project](#about-the-project)
+- [About](#about-the-project)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -20,11 +15,22 @@
 
 <!-- tocstop -->
 
-## About The Project
+## About
 
-> Fetch all the starred repositories for a GitHub user
+> ✅ Validate your MongoDB queries operators before executing them
 
-This packages helps in retrieving all the starred repositories for a given github user
+Do you ever find yourself squinting at your MongoDB queries, only to realize you've made a tiny typo that's causing a big headache? We've been there too. That's why we built this nifty little tool – to save you from those pesky errors and wasted database trips.
+
+**Benefits**
+
+- Error-Free Queries: Say goodbye to query typos and syntax errors. Our validator catches them before they cause any trouble.
+- Efficiency Boost: Streamline your development process by validating queries upfront, saving you time and resources.
+
+**Use Cases**
+
+- Production Systems: Enhance the robustness of production systems by validating queries before executing them in live environments, minimizing downtime and errors.
+- Development Environments: Validate queries during development to catch errors early and streamline the debugging process.
+- Testing Processes: Integrate query validation into testing pipelines to ensure query correctness and reliability.
 
 <!-- GETTING STARTED -->
 
@@ -40,10 +46,23 @@ yarn add mongodb-query-validator
 
 ## Usage
 
+```ts
+import { validateQuery } from './src/index';
 
-## Options
+const { isValidQuery } = validateQuery({ myField: { nested: { $gte: 123 } } });
+// isValidQuery = true
 
-<!-- CONTRIBUTING -->
+const { isValidQuery, invalidFields } = validateQuery({
+  myField: { nested: { $exist: true } },
+});
+// isValidQuery = false
+// invalidFields = ["myField.nexted.$exist"]
+```
+
+## Valid query Operators
+
+You can find all supported query operator [here](./src/allowed.ts)
+
 ## Contributing
 
 Project is pretty simple and straight forward for what is my needs, but if you have any idea you're welcome.
