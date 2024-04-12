@@ -1,0 +1,33 @@
+name: Release
+
+on: [workflow_dispatch]
+
+jobs:
+    test:
+        name: Run tests
+        uses: ./.github/workflows/test.yml
+
+    release:
+        needs: [test]
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+            - uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Install dependencies
+              run: npm i
+
+            - name: Build
+              run: npm run build
+
+            - name: Semantic release
+              uses: codfish/semantic-release-action@v3
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+                  GIT_AUTHOR_NAME: '${{ github.actor }}'
+                  GIT_COMMITTER_NAME: '${{ github.actor }}'
