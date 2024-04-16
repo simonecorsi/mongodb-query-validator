@@ -2,6 +2,7 @@ import { ALLOWED_OPERATORS } from './allowed';
 
 function validateField(
   key: string,
+  path: string,
   allowedOperators: typeof ALLOWED_OPERATORS
 ): boolean {
   // only validate key starting with $ to check of invalid MongoDB uperator
@@ -12,7 +13,7 @@ function validateField(
   return true;
 }
 
-function traverse(
+export function validateQueryRecurse(
   obj,
   maxDepth: number = 0, // 0 it's up to infinity
   path = '',
@@ -29,11 +30,17 @@ function traverse(
           maxDepth === 0 ||
           currentDepth < maxDepth
         ) {
-          traverse(value, maxDepth, fullPath, currentDepth + 1, invalidFields); // recursively recurse nested objects
+          validateQueryRecurse(
+            value,
+            maxDepth,
+            fullPath,
+            currentDepth + 1,
+            invalidFields
+          ); // recursively recurse nested objects
         }
       } else {
         // the first invalid field
-        if (!validateField(key, ALLOWED_OPERATORS)) {
+        if (!validateField(key, fullPath, ALLOWED_OPERATORS)) {
           invalidFields.push(fullPath);
         }
       }
@@ -44,13 +51,3 @@ function traverse(
     invalidFields,
   };
 }
-
-export function validateQuery(
-  obj: Record<string, unknown>,
-  // Zero is infinity
-  maxDepth: number = 0
-) {
-  return traverse(obj, maxDepth);
-}
-
-export default validateQuery;

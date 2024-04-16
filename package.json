@@ -1,7 +1,7 @@
 {
   "name": "mongodb-query-validator",
   "version": "1.0.1",
-  "description": "✅ Validate your MongoDB queries operators before executing them",
+  "description": "✅ Zero Dependency MongoDB Query Operator Validator",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
   "publishConfig": {
@@ -9,7 +9,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "esbuild src/index.ts --sourcemap=external --bundle --platform=node --outdir=dist --format=cjs",
     "test": "tap",
     "coverage": "tap --coverage-report=html",
     "prepare": "node prepare.js || echo 'Skipping prepare'"
@@ -38,7 +38,6 @@
   "devDependencies": {
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.2",
-    "@istanbuljs/esm-loader-hook": "^0.2.0",
     "@saithodev/semantic-release-backmerge": "^4.0.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
@@ -49,6 +48,7 @@
     "@types/tap": "^15.0.11",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
+    "esbuild": "^0.20.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-node": "^11.1.0",
@@ -57,10 +57,10 @@
     "is-ci": "^3.0.0",
     "lint-staged": "^15.2.2",
     "markdown-toc": "^1.2.0",
-    "nyc": "^15.1.0",
     "prettier": "^3.2.5",
     "tap": "^18.7.2",
-    "ts-node": "^10.9.2",
+    "tinybench": "^2.7.0",
+    "tsx": "^4.7.2",
     "typescript": "^5.4.5"
   }
 }
