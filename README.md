@@ -1,8 +1,10 @@
 # mongodb-query-validator
 
-<!-- PROJECT SHIELDS -->
-
 <!-- ![tests](https://github.com/simonecorsi/mongodb-query-validator/workflows/test/badge.svg) -->
+
+> ✅ Validate your MongoDB queries operators before executing them
+
+## Table of Contents
 
 <!-- toc -->
 
@@ -16,8 +18,6 @@
 <!-- tocstop -->
 
 ## About
-
-> ✅ Validate your MongoDB queries operators before executing them
 
 Do you ever find yourself squinting at your MongoDB queries, only to realize you've made a tiny typo that's causing a big headache? We've been there too. That's why we built this nifty little tool – to save you from those pesky errors and wasted database trips.
 
