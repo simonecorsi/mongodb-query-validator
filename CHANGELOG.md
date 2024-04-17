@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/simonecorsi/mongodb-query-validator/compare/v1.0.1...v1.1.0) (2024-04-17)
+
+
+### Features
+
+* switched from stack to recursion ([5bdafd3](https://github.com/simonecorsi/mongodb-query-validator/commit/5bdafd3c6069b4ee19052e416cf8806b0cfef696))
+
 ## [1.0.1](https://github.com/simonecorsi/mongodb-query-validator/compare/v1.0.0...v1.0.1) (2024-04-12)
 
 
