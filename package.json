@@ -30,11 +30,6 @@
   ],
   "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
   "license": "MIT",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
