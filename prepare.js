@@ -2,12 +2,15 @@
 
 let isCi = false;
 
-try {
-  isCi = require('is-ci');
-} catch (_) {
-  isCi = true;
-}
-
-if (!isCi) {
-  require('husky').install();
-}
+import('is-cia')
+  .then((mod) => {
+    isCi = mod.default;
+  })
+  .catch(() => {})
+  .finally(() => {
+    return import('husky').then((mod) => {
+      if (!isCi) {
+        mod.default();
+      }
+    });
+  });

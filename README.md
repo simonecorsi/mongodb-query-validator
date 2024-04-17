@@ -2,15 +2,18 @@
 
 <!-- ![tests](https://github.com/simonecorsi/mongodb-query-validator/workflows/test/badge.svg) -->
 
-> ✅ Validate your MongoDB queries operators before executing them
+> ✅ Zero Dependency MongoDB Query Operator Validator, why bother the database when you can save network rount-trip and CPU cycles?
 
 ## Table of Contents
 
 <!-- toc -->
 
-- [About](#about-the-project)
+- [About](#about)
+  * [Benefits](#benefits)
+  * [Use Cases](#use-cases)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Valid query Operators](#valid-query-operators)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
