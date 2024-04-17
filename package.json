@@ -12,7 +12,7 @@
     "build": "esbuild src/index.ts --sourcemap=external --bundle --platform=node --outdir=dist --format=cjs",
     "test": "tap",
     "coverage": "tap --coverage-report=html",
-    "prepare": "node prepare.js || echo 'Skipping prepare'"
+    "prepare": "$CI || husky"
   },
   "keywords": [
     "mongodb",
