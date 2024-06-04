@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/simonecorsi/mongodb-query-validator/compare/v1.2.0...v1.3.0) (2024-06-04)
+
+
+### Features
+
+* adds regex operators ([ef0a97a](https://github.com/simonecorsi/mongodb-query-validator/commit/ef0a97a307dfa7a51acbbb24cc9de325482dd6b3))
+
 # [1.2.0](https://github.com/simonecorsi/mongodb-query-validator/compare/v1.1.0...v1.2.0) (2024-04-17)
 
 
