@@ -32,4 +32,7 @@ export const ALLOWED_OPERATORS = [
   '$bitsAllSet',
   '$bitsAnySet',
   '$bitsAllClear',
+  // regexp
+  '$regex',
+  '$options',
 ];
