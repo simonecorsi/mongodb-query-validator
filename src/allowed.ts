@@ -28,6 +28,11 @@ export const ALLOWED_OPERATORS = [
   '$geoIntersects',
   // Text Search Operators
   '$text',
+  '$search',
+  '$language',
+  '$caseSensitive',
+  '$diacriticSensitive',
+
   // Bitwise Operators
   '$bitsAllSet',
   '$bitsAnySet',
