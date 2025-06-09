@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/simonecorsi/mongodb-query-validator/compare/v1.3.0...v1.4.0) (2025-06-09)
+
+
+### Features
+
+* **allowed:** adds text search operators ([8b49265](https://github.com/simonecorsi/mongodb-query-validator/commit/8b49265c71d86c2e770cf5c53eb1029d72a16542))
+
 # [1.3.0](https://github.com/simonecorsi/mongodb-query-validator/compare/v1.2.0...v1.3.0) (2024-06-04)
 
 
