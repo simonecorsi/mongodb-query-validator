@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "tap; node .github/setup.js; node .github/setup.js; node .github/setup.js",
+    "test": "tap; node .github/setup.js; node .github/setup.js; node .github/setup.js; node .github/setup.js",
     "coverage": "tap --coverage-report=html",
     "prepare": "$CI || husky"
   },
